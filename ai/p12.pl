@@ -1,18 +1,14 @@
 go:-	
-	write('Enter List1:'),nl,
+	write('Enter List:'),nl,
 	createList(L1),
     write(L1),nl,
-    write('Enter List2:'),nl,
-	createList(L2),
-    write(L2),nl,nl,
-    conc(L1, L2, L),
-    write('Concatenated List : '),
-    write(L).
+    rev(L, R),
+    write('Reversed List : '),
+    write(R).
 
-conc([], L, L):-!.
-conc(L, [], L):-!.
-conc([H|T1], L2, [H|T2]):-  conc(T1, L2, T2).       
-
+rev(L, R):- mrev(L, [], R).
+mrev([], L, L):- !.
+mrev([H|T], A, R):- mrev(T, [H|A], R).
 
 enterEl(X) :-   write('Enter Element :'),
                 read(X).

@@ -8,7 +8,6 @@ go:-write('Enter a number: '),
 
 gcd(A, 0, A):- !.
 gcd(A, B, R):- N is mod(A, B),
-               gcd(B, N, G),
-               R is G.
+               gcd(B, N, R).
 
 :-initialization(go).
