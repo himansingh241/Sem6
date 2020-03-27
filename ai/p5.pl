@@ -1,6 +1,6 @@
-go:-write('Enter a number: '),
+go:-write('Enter first number: '),
     read(A), nl,
-    write('Enter a number: '),
+    write('Enter second number: '),
     read(B),nl,
     gcd(A, B, R),
     write('GCD: '),

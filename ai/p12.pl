@@ -1,7 +1,7 @@
 go:-	
 	write('Enter List:'),nl,
-	createList(L1),
-    write(L1),nl,
+	createList(L),
+    write(L),nl,
     rev(L, R),
     write('Reversed List : '),
     write(R).

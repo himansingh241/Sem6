@@ -1,6 +1,6 @@
 go:-write('Enter a list: '),
     read(L), nl,
-    write('Number to be searched: '),
+    write('Number to search: '),
     read(E),nl,
     memb(L, E),write('Yes');write('No').
 

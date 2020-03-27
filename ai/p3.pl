@@ -4,7 +4,7 @@ go:-write('Enter a number: '),
     write('Factorial: '),
     write(R).
 
-fact(0, R) :- !
+fact(0, 1).
 fact(A, R):- A > 0,
     A1 is A - 1,
     fact(A1, R1),

@@ -1,4 +1,4 @@
-go:-write('First Number: '),
+o:-write('First Number: '),
     read(A),
     write('Second Number: '),
     read(B),
@@ -6,5 +6,6 @@ go:-write('First Number: '),
     write('Max: '),
     write(M).
 
-max(A, B, M):- A > B -> M = A ; M = B.
+max(A, B, M):- A =< B , !, M = B.
+max(A, _, A).
 :-initialization(go).
