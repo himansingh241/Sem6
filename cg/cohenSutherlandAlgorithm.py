@@ -29,10 +29,12 @@ def cohenSutherlandAlgo(x1, y1, x2, y2):
     flag = False
 
     while (True):
+        print(codeInitial)
+        print(codeFinal)
         if codeInitial == 0 and codeFinal == 0:
             flag = True
             break
-        if (codeInitial and codeFinal) != 0:
+        elif (codeInitial & codeFinal) != 0:
             break
         if codeInitial != 0:
             code_outside = codeInitial
