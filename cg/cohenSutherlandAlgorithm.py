@@ -8,6 +8,7 @@ BOTTOM = 4
 RIGHT = 2
 LEFT = 1
 
+
 def getCode(x, y):
     code = 0
     if x < x_min:
@@ -20,6 +21,7 @@ def getCode(x, y):
         code |= TOP
     return code
 
+
 def cohenSutherlandAlgo(x1, y1, x2, y2):
     X, Y = [], []
     codeInitial = getCode(x1, y1)
@@ -27,7 +29,7 @@ def cohenSutherlandAlgo(x1, y1, x2, y2):
     flag = False
 
     while (True):
-        if (codeInitial or codeFinal) == 0:
+        if codeInitial == 0 and codeFinal == 0:
             flag = True
             break
         if (codeInitial and codeFinal) != 0:
@@ -77,7 +79,7 @@ height = int(input("Height of Rectangle: "))
 width = int(input("Width of Rectangle: "))
 
 x_min, y_min = x, y
-x_max, y_max = width, height
+x_max, y_max = x + width, y + height
 
 n = int(input("Enter number of Lines: "))
 X, Y = [], []
@@ -104,5 +106,3 @@ color = (rand(), rand(), rand())
 rect = plt.Rectangle((x, y), width, height, edgecolor=color, fill=False)
 plt.gca().add_patch(rect)
 plt.show()
-
-
