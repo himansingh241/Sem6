@@ -1,7 +1,6 @@
 import numpy as np
-from tqdm import tqdm
-
 from sklearn.metrics import accuracy_score
+
 
 def sigmoid(x, derv=False):
     if derv:
@@ -18,7 +17,7 @@ def algo(X, y, alpha=0.01, epochs=100):
     output_weights = np.random.uniform(size=(hidden_neurons, output_neurons))
     output_bias = np.random.uniform(size=(1, output_neurons))
 
-    for i in tqdm(range(epochs)):
+    for i in range(epochs):
         # Output From hidden layer
         hidden_activation = X @ hidden_weights
         hidden_activation += hidden_bias
@@ -60,5 +59,3 @@ if __name__ == "__main__":
     y_pred = predict(predicted_output)
     print("Prediction: ", y_pred)
     print("Accuracy: ", accuracy_score(y, y_pred))
-
-

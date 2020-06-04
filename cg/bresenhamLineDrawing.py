@@ -38,7 +38,7 @@ for k in range(xdiff):
         P += diff2
     X.append(x)
     Y.append(y)
-    
+
 print(X)
 print(Y)
 plt.plot(X, Y)

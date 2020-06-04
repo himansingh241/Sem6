@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 
+
 def midPointAlgo(x_center, y_center, r):
     x, y = r, 0
     X, Y = [], []
@@ -41,6 +42,7 @@ def midPointAlgo(x_center, y_center, r):
             X.append(-y + x_center)
             Y.append(-x + y_center)
     return X, Y
+
 
 x_center, y_center = map(int, input("Enter center points of Circle: ").split())
 r = int(input('Enter radius of circle: '))
